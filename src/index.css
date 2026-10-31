@@ -1,0 +1,125 @@
+/* Matrix / Cyber Grid Ambient Background */
+.cyber-grid {
+  background-size: 40px 40px;
+  background-image: 
+    linear-gradient(to right, rgba(30, 41, 59, 0.25) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(30, 41, 59, 0.25) 1px, transparent 1px);
+}
+
+.terminal-scroll::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+.terminal-scroll::-webkit-scrollbar-track {
+  background: #090d16;
+}
+.terminal-scroll::-webkit-scrollbar-thumb {
+  background: #1e293b;
+  border-radius: 3px;
+}
+.terminal-scroll::-webkit-scrollbar-thumb:hover {
+  background: #334155;
+}
+
+.glow-red {
+  box-shadow: 0 0 25px rgba(244, 63, 94, 0.18);
+}
+.glow-blue {
+  box-shadow: 0 0 25px rgba(6, 182, 212, 0.18);
+}
+.glow-rose-strong {
+  box-shadow: 0 0 35px rgba(244, 63, 94, 0.28);
+}
+.glow-rose-card {
+  box-shadow: 0 10px 30px -10px rgba(244, 63, 94, 0.2);
+}
+
+/* Glassmorphism */
+.glass-panel {
+  background: rgba(15, 23, 42, 0.75);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.glass-panel-elevated {
+  background: rgba(15, 23, 42, 0.88);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(244, 63, 94, 0.25);
+}
+
+/* Animations for Expandable Windows */
+@keyframes windowExpand {
+  0% {
+    opacity: 0;
+    transform: translateY(-8px) scale(0.98);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+.animate-window-expand {
+  animation: windowExpand 0.3s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+@keyframes pulseBorder {
+  0%, 100% {
+    border-color: rgba(244, 63, 94, 0.3);
+  }
+  50% {
+    border-color: rgba(244, 63, 94, 0.8);
+  }
+}
+
+.animate-pulse-border {
+  animation: pulseBorder 2.5s infinite;
+}
+
+/* Course Roadmap Road & Pin Animations */
+@keyframes roadDashFlow {
+  from {
+    stroke-dashoffset: 52;
+  }
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+.animate-road-dash {
+  animation: roadDashFlow 1.8s linear infinite;
+}
+
+@keyframes pinFloat {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-6px);
+  }
+}
+
+.animate-pin-float {
+  animation: pinFloat 2.6s ease-in-out infinite;
+}
+
+/* 3D Card Flip Utilities */
+.perspective-1000 {
+  perspective: 1000px;
+}
+
+.transform-style-3d {
+  transform-style: preserve-3d;
+}
+
+.backface-hidden {
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+}
+
+.rotate-y-180 {
+  transform: rotateY(180deg);
+}
+
